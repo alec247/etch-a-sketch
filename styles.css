@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
@@ -5,17 +9,22 @@
 
 #container {
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    /* grid-template-rows: repeat(var(--grid-rows), 1fr); */
+    /* grid-template-columns: repeat(var(--grid-cols), 1fr); */
     width: 240px;
     height: 240px;
     margin-top: 1em;
 }
 
 .cell {
+    display: flex;
     padding: 1em;
     border: 1px solid #ddd;
     height: 15px;
     width: 15px;
     text-align: center;
+}
+
+.colored {
+    background-color: red;
 }
