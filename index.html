@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Etch-A-Sketch</h1>
+    <label for="sizeInput">Enter a number of rows/columns</label><br>
+    <input name="sizeInput" type="number" max="100" id="sizeInput">
+    <button onclick="makeGrid(document.querySelector('#sizeInput').value, document.querySelector('#sizeInput').value)">
+        Create Grid
+    </button>
+    <button>Reset</button>
     <div id="container"></div>
 </body>
 </html>

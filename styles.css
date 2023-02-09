@@ -9,6 +9,7 @@
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     width: 240px;
     height: 240px;
+    margin-top: 1em;
 }
 
 .cell {
