@@ -1,4 +1,4 @@
-const container = document.querySelector("#container");
+const container = document.querySelector(".container");
 
 //creates grid with x amount of rows or cols
 
@@ -7,14 +7,12 @@ function makeGrid(size) {
 
     let newCellArray = [];
 
-    // maybe store size in variable and loop through container children X times to removeChildren 1 by 1?    
-
     container.style.setProperty("--grid-rows", size);
     container.style.setProperty("--grid-cols", size);
 
     for (let i = 0; i < (size ** 2); i++) {
         let cell = document.createElement("div");
-        cell.innerText = (i + 1);
+        // cell.innerText = (i + 1);
         cell.className = "cell";
         newCellArray.push(cell);
     }
@@ -38,6 +36,14 @@ function resetCell() {
     this.classList.toggle("colored");
 }
 
+function resetAllCells() {
+    let cells = document.querySelectorAll(".cell");
+
+    cells.forEach(cell => {
+        cell.classList.remove("colored");
+    })
+}
+
 function addCellFunctionality() {
     let cells = document.querySelectorAll(".cell");
 
@@ -46,6 +52,7 @@ function addCellFunctionality() {
         cell.addEventListener("click", resetCell);
     })
 }
+
 
 
 

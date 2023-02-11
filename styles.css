@@ -7,21 +7,25 @@ body {
     text-align: center;
 }
 
-#container {
+.container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     width: 50vw;
-    height: 50vh;
-    margin-top: 1em;
+    row-gap: 0;
+    justify-content: center;
+    margin: 1em 0 0 0;
+    padding: 0;
 }
 
 .cell {
-    display: flex;
-    padding: 1em;
     border: 1px solid #ddd;
-   
     text-align: center;
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+    /* height: calc(inherit / var(--grid-rows)); */
+    /* width: calc(inherit / var(--grid-rows)); */
 }
 
 .colored {
